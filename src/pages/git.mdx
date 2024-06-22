@@ -1,0 +1,111 @@
+# Git
+
+Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente.
+Git te permite controlar los cambios en tu código y colaborar con otros miembros del equipo.
+
+[https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
+
+# Introducción
+
+## Descarga
+
+Puedes descargar **Git** desde el siguiente [Link](https://www.notion.so/Git-ed0e08caa70149bd8f2d05e996bb43a6?pvs=21) ó ejecunta el siguiente codigo en tu consola
+
+```jsx
+winget install --id=Git.Git  -e
+```
+
+## Configurar Git
+
+```jsx
+git config							                                : Ver configuracion
+git config -l							:
+git config --global user.name "Ronald Mindiola"		      : Establecer nombre de usuario.
+git config --global user.email ronaldmindiola@live.com	: Establecer email.
+```
+
+## Uso Basico de Git
+
+Para usar Git creamos un directorio (Crear carpeta).
+
+`mkdir nombre_carpeta`
+
+Nos cambiamos a ese directorio ( Ir a esa carpeta).
+
+`cd nombre_carpeta`
+Inicializar Git y clonar repositorio.
+
+`git init`
+
+Agregar y preparar los cambios al entorno de ensayo.
+
+`git add index.html`
+
+Captura una instantanea de los cambios preparados.
+
+`git commit -m “Mensaje descriptivo del Commit”` :
+Muestra el estado actual.
+
+`git status`
+
+---
+
+## Creación de un repositorio
+
+Un repositorio es un lugar donde puedes almacenar tu código y controlar los cambios en él. Para crear un repositorio en Git, debes seguir estos pasos:
+
+1. Abre la terminal o línea de comandos en tu computadora.
+2. Navega hasta la carpeta donde quieres crear el repositorio.
+3. Ejecuta el siguiente comando: `git init`. Esto creará un nuevo repositorio vacío en la carpeta.
+
+## Añadir y confirmar cambios
+
+Una vez que tienes un repositorio Git, puedes empezar a añadir y confirmar cambios en tu código. Para hacerlo, sigue los siguientes pasos:
+
+1. Modifica uno o varios archivos en tu repositorio.
+2. Ejecuta el comando `git add .` para añadir todos los cambios al área de preparación.
+3. Ejecuta el comando `git commit -m "Mensaje de confirmación"` para confirmar los cambios en el repositorio.
+
+## Ramas (Branches)
+
+Las ramas son una parte fundamental de Git, y pueden ser muy útiles para trabajar en diferentes características o arreglos al mismo tiempo. Algunos consejos para el trabajo con ramas incluyen:
+
+- **Crea una rama para cada característica o arreglo**: Esto te permitirá trabajar en diferentes aspectos de tu proyecto sin afectar el trabajo de otros miembros del equipo. Además, puedes fusionar las ramas cuando estés seguro de que todo funciona correctamente.
+- **Elimina las ramas inútiles**: A medida que tu proyecto crece, es posible que tengas muchas ramas en tu repositorio. Es importante mantener limpio el repositorio, por lo que debes eliminar las ramas que ya no necesitas.
+- **Usa ramas de una sola vez (One-time branches)**: Estas ramas son útiles cuando necesitas hacer cambios en una rama específica y no quieres afectar a otras ramas. Una vez que termines el trabajo en la rama, puedes eliminarla.
+
+## Rebase
+
+Rebase es una herramienta poderosa que te permite cambiar la historia de tu repositorio. Esto puede ser útil para organizar tu trabajo o para resolver conflictos en la fusión de ramas. Algunos consejos para trabajar con rebase incluyen:
+
+- **Usa rebase para mantener una historia limpia**: Puedes usar rebase para unir varias confirmaciones en una sola, lo que puede simplificar la historia de tu repositorio y hacerla más fácil de seguir.
+- **Usa rebase para resolver conflictos de fusión**: Si tienes conflictos al fusionar dos ramas, puedes usar rebase para solucionarlos antes de la fusión.
+- **Ten cuidado con el uso de rebase en ramas públicas**: Si estás trabajando en una rama que otras personas están usando, debes tener cuidado al usar rebase, ya que puedes cambiar la historia del repositorio y afectar el trabajo de otras personas.
+
+## Stash
+
+Stash es una herramienta útil que te permite guardar temporalmente cambios en tus archivos sin confirmarlos. Esto puede ser útil cuando necesitas cambiar de rama o cuando necesitas hacer una prueba rápida sin comprometer tus cambios. Algunos consejos para trabajar con stash incluyen:
+
+- **Usa stash para guardar cambios temporales**: Si necesitas hacer una prueba rápida o cambiar de rama, puedes usar stash para guardar temporalmente tus cambios sin confirmarlos.
+- **Elimina stash cuando ya no lo necesites**: Al igual que con las ramas, es importante mantener limpio el repositorio, por lo que debes eliminar los stash que ya no necesitas.
+- **Usa stash para guardar cambios parciales**: Stash también te permite guardar cambios parciales en tus archivos, lo que puede ser útil cuando solo necesitas guardar algunos cambios en lugar de todos.
+
+Estos son algunos consejos básicos para trabajar con Git. Con práctica y experiencia, podrás convertirte en un experto en Git y aprovechar al máximo sus herramientas y características. Si ya estás familiarizado con Git y has utilizado sus comandos básicos, es hora de profundizar en su uso y mejorar tus habilidades.
+
+Aquí tienes algunos ejemplos de cómo usar Git en tu día a día:
+
+- **Crear una nueva rama**: Si quieres trabajar en una nueva característica o arreglo, puedes crear una nueva rama usando el comando `git branch nombre_de_la_rama`.
+- **Cambiar de rama**: Si quieres cambiar de rama, puedes usar el comando `git checkout nombre_de_la_rama`.
+- **Fusionar ramas**: Si quieres fusionar una rama con otra, puedes usar el comando `git merge nombre_de_la_rama`.
+- **Ver la historia del repositorio**: Si quieres ver la historia del repositorio, puedes usar el comando `git log`.
+- **Deshacer cambios**: Si quieres deshacer cambios en un archivo específico, puedes usar el comando `git checkout -- nombre_del_archivo`. Si quieres deshacer todos los cambios en un archivo, puedes usar el comando `git reset HEAD nombre_del_archivo`.
+- **Eliminar un archivo**: Si quieres eliminar un archivo del repositorio, puedes usar el comando `git rm nombre_del_archivo`.
+- **Enviar tus cambios a un repositorio remoto**: Si quieres enviar tus cambios a un repositorio remoto, puedes usar el comando `git push nombre_del_repositorio nombre_de_la_rama`.
+
+Recuerda que estos son solo algunos ejemplos de cómo puedes usar Git en tu día a día. Hay muchas otras herramientas y características en Git que puedes usar para mejorar tu flujo de trabajo y colaboración con otros miembros del equipo.
+
+Además de estos comandos, existen otros que pueden ser muy útiles en situaciones específicas. Por ejemplo, si necesitas eliminar una rama remota que ya no necesitas, puedes usar el comando `git push nombre_del_repositorio --delete nombre_de_la_rama`. Si necesitas ver los cambios que has hecho en un archivo específico, puedes usar el comando `git diff nombre_del_archivo`. Y si necesitas actualizar tu repositorio local con los cambios de un repositorio remoto, puedes usar el comando `git pull nombre_del_repositorio nombre_de_la_rama`.
+
+Recuerda que Git es una herramienta muy poderosa que te permite controlar los cambios en tu código y colaborar con otros miembros del equipo. Con práctica y experiencia, podrás convertirte en un experto en Git y aprovechar al máximo sus herramientas y características.
+
+Si tienes alguna pregunta o necesitas ayuda con Git, no dudes en consultar la documentación oficial de Git o buscar en la comunidad de desarrolladores en línea. ¡Buena suerte y feliz codificación!
